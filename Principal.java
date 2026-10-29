@@ -3,10 +3,8 @@ import java.util.Scanner;
 
 public class Principal {
 
-    // Constante: salario-base igual para todos os colaboradores
     static final double SALARIO_BASE = 2000.00;
 
-    // Listas paralelas: cada posicao representa um colaborador
     static ArrayList<String> matriculas = new ArrayList<>();
     static ArrayList<String> nomes = new ArrayList<>();
     static ArrayList<Integer> tipos = new ArrayList<>();
@@ -131,7 +129,6 @@ public class Principal {
         nomes.add(nome);
         tipos.add(tipo);
 
-        // Campos que nao se aplicam ao tipo recebem zero
         valoresVendas.add(0.0);
         percentuais.add(0.0);
         quantidadesPecas.add(0);
@@ -202,7 +199,6 @@ public class Principal {
         double salario = SALARIO_BASE;
 
         if (tipos.get(i) == 1) {
-            // Colaborador padrao: recebe somente o salario-base
             salario = SALARIO_BASE;
         } else if (tipos.get(i) == 2) {
             double comissao = valoresVendas.get(i) * percentuais.get(i) / 100.0;
